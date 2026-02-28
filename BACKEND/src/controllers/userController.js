@@ -1,3 +1,5 @@
+
+
 exports.createUser = async (req, res) => {
   try {
     const { dni, name, password, role } = req.body;
@@ -20,3 +22,7 @@ exports.createUser = async (req, res) => {
     res.status(500).json({ message: "Error al crear usuario" });
   }
 };
+
+
+protect,
+authorize("admin")
